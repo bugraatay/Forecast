@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1739E98D3BC6DF73EE7D2A82 /* libPods-Forecast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C099B6D35BF937348E1903BE /* libPods-Forecast.a */; };
 		CF92A12E1E58C0EE00C70300 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF92A12D1E58C0EE00C70300 /* main.m */; };
 		CF92A1311E58C0EE00C70300 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF92A1301E58C0EE00C70300 /* AppDelegate.m */; };
 		CF92A1341E58C0EE00C70300 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF92A1331E58C0EE00C70300 /* ViewController.m */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1256C0D5C8CCD9328D6A46C8 /* Pods-Forecast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Forecast.release.xcconfig"; path = "Pods/Target Support Files/Pods-Forecast/Pods-Forecast.release.xcconfig"; sourceTree = "<group>"; };
+		8166722852BF420CBA940AE8 /* Pods-Forecast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Forecast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Forecast/Pods-Forecast.debug.xcconfig"; sourceTree = "<group>"; };
+		C099B6D35BF937348E1903BE /* libPods-Forecast.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Forecast.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF92A1291E58C0EE00C70300 /* Forecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF92A12D1E58C0EE00C70300 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CF92A12F1E58C0EE00C70300 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1739E98D3BC6DF73EE7D2A82 /* libPods-Forecast.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A07A0C955EA2461D46BE0C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C099B6D35BF937348E1903BE /* libPods-Forecast.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CF92A1201E58C0EE00C70300 = {
 			isa = PBXGroup;
 			children = (
 				CF92A12B1E58C0EE00C70300 /* Forecast */,
 				CF92A12A1E58C0EE00C70300 /* Products */,
+				E65FE94EB31AC8666186C22C /* Pods */,
+				4A07A0C955EA2461D46BE0C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +94,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E65FE94EB31AC8666186C22C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8166722852BF420CBA940AE8 /* Pods-Forecast.debug.xcconfig */,
+				1256C0D5C8CCD9328D6A46C8 /* Pods-Forecast.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF92A1401E58C0EE00C70300 /* Build configuration list for PBXNativeTarget "Forecast" */;
 			buildPhases = (
+				2333F07F4D8C1131BC912B2F /* [CP] Check Pods Manifest.lock */,
 				CF92A1251E58C0EE00C70300 /* Sources */,
 				CF92A1261E58C0EE00C70300 /* Frameworks */,
 				CF92A1271E58C0EE00C70300 /* Resources */,
+				1F76FAB4EBE366F701065992 /* [CP] Embed Pods Frameworks */,
+				91A97B4EC7BF67203C3803B6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,6 +172,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F76FAB4EBE366F701065992 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Forecast/Pods-Forecast-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2333F07F4D8C1131BC912B2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		91A97B4EC7BF67203C3803B6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Forecast/Pods-Forecast-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CF92A1251E58C0EE00C70300 /* Sources */ = {
@@ -273,6 +348,7 @@
 		};
 		CF92A1411E58C0EE00C70300 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8166722852BF420CBA940AE8 /* Pods-Forecast.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
@@ -287,6 +363,7 @@
 		};
 		CF92A1421E58C0EE00C70300 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1256C0D5C8CCD9328D6A46C8 /* Pods-Forecast.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
