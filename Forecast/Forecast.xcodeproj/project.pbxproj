@@ -10,10 +10,10 @@
 		1739E98D3BC6DF73EE7D2A82 /* libPods-Forecast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C099B6D35BF937348E1903BE /* libPods-Forecast.a */; };
 		CF92A12E1E58C0EE00C70300 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF92A12D1E58C0EE00C70300 /* main.m */; };
 		CF92A1311E58C0EE00C70300 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF92A1301E58C0EE00C70300 /* AppDelegate.m */; };
-		CF92A1341E58C0EE00C70300 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF92A1331E58C0EE00C70300 /* ViewController.m */; };
 		CF92A1371E58C0EE00C70300 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF92A1351E58C0EE00C70300 /* Main.storyboard */; };
 		CF92A1391E58C0EE00C70300 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF92A1381E58C0EE00C70300 /* Assets.xcassets */; };
 		CF92A13C1E58C0EE00C70300 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF92A13A1E58C0EE00C70300 /* LaunchScreen.storyboard */; };
+		CFB2DBB21E58CA9A00F70B26 /* Dashboard_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB2DBB11E58CA9A00F70B26 /* Dashboard_TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,12 +24,12 @@
 		CF92A12D1E58C0EE00C70300 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CF92A12F1E58C0EE00C70300 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CF92A1301E58C0EE00C70300 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CF92A1321E58C0EE00C70300 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CF92A1331E58C0EE00C70300 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CF92A1361E58C0EE00C70300 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF92A1381E58C0EE00C70300 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF92A13B1E58C0EE00C70300 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF92A13D1E58C0EE00C70300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFB2DBB01E58CA9A00F70B26 /* Dashboard_TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dashboard_TableViewController.h; sourceTree = "<group>"; };
+		CFB2DBB11E58CA9A00F70B26 /* Dashboard_TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dashboard_TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,13 +75,13 @@
 			children = (
 				CF92A12F1E58C0EE00C70300 /* AppDelegate.h */,
 				CF92A1301E58C0EE00C70300 /* AppDelegate.m */,
-				CF92A1321E58C0EE00C70300 /* ViewController.h */,
-				CF92A1331E58C0EE00C70300 /* ViewController.m */,
 				CF92A1351E58C0EE00C70300 /* Main.storyboard */,
 				CF92A1381E58C0EE00C70300 /* Assets.xcassets */,
 				CF92A13A1E58C0EE00C70300 /* LaunchScreen.storyboard */,
 				CF92A13D1E58C0EE00C70300 /* Info.plist */,
 				CF92A12C1E58C0EE00C70300 /* Supporting Files */,
+				CFB2DBB01E58CA9A00F70B26 /* Dashboard_TableViewController.h */,
+				CFB2DBB11E58CA9A00F70B26 /* Dashboard_TableViewController.m */,
 			);
 			path = Forecast;
 			sourceTree = "<group>";
@@ -226,9 +226,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF92A1341E58C0EE00C70300 /* ViewController.m in Sources */,
 				CF92A1311E58C0EE00C70300 /* AppDelegate.m in Sources */,
 				CF92A12E1E58C0EE00C70300 /* main.m in Sources */,
+				CFB2DBB21E58CA9A00F70B26 /* Dashboard_TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
