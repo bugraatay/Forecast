@@ -123,6 +123,8 @@
         UILabel *label4 = (UILabel *) [cell viewWithTag:4];
         UILabel *label5 = (UILabel *) [cell viewWithTag:5];
         UILabel *label6 = (UILabel *) [cell viewWithTag:6];
+        label1.backgroundColor = [[UIColor greenColor] colorWithAlphaComponent:0.2f];
+        label4.backgroundColor = [[UIColor greenColor] colorWithAlphaComponent:0.2f];
 
         dic = [self.forecast objectAtIndex:indexPath.row];
         Weather *weather = [[Weather alloc] init];
