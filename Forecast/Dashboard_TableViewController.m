@@ -75,27 +75,74 @@
     return 0;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.section == 5){
+        return 100;
+    }else {
+        return 44;
+    }
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    // [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     NSMutableDictionary *dic;
     // Configure the cell...
     if (indexPath.section == 1) {
         dic = self.wind;
+        NSLog(@"dic: %@", dic);
+        cell.textLabel.text = [NSString stringWithFormat:@"%@", [[dic allKeys] objectAtIndex: indexPath.row]];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [[dic allValues] objectAtIndex: indexPath.row]];
+        return cell;
     } else if(indexPath.section == 2){
         dic = self.atmosphere;
+        NSLog(@"dic: %@", dic);
+        cell.textLabel.text = [NSString stringWithFormat:@"%@", [[dic allKeys] objectAtIndex: indexPath.row]];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [[dic allValues] objectAtIndex: indexPath.row]];
+        return cell;
     } else if(indexPath.section == 3){
         dic = self.astronomy;
+        NSLog(@"dic: %@", dic);
+        cell.textLabel.text = [NSString stringWithFormat:@"%@", [[dic allKeys] objectAtIndex: indexPath.row]];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [[dic allValues] objectAtIndex: indexPath.row]];
+        return cell;
     } else if(indexPath.section == 4){
         dic = nil;
+        NSLog(@"dic: %@", dic);
+        cell.textLabel.text = [NSString stringWithFormat:@"%@", [[dic allKeys] objectAtIndex: indexPath.row]];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [[dic allValues] objectAtIndex: indexPath.row]];
+        return cell;
     } else if(indexPath.section == 5){
-        dic = [self.forecast objectAtIndex:1];
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell2"];
+
+        UILabel *label1 = (UILabel *) [cell viewWithTag:1];
+        UILabel *label2 = (UILabel *) [cell viewWithTag:2];
+        UILabel *label3 = (UILabel *) [cell viewWithTag:3];
+        UILabel *label4 = (UILabel *) [cell viewWithTag:4];
+        UILabel *label5 = (UILabel *) [cell viewWithTag:5];
+        UILabel *label6 = (UILabel *) [cell viewWithTag:6];
+
+        dic = [self.forecast objectAtIndex:indexPath.row];
+        Weather *weather = [[Weather alloc] init];
+        weather.code = dic[@"code"];
+        weather.date = dic[@"date"];
+        weather.day = dic[@"day"];
+        weather.high = dic[@"high"];
+        weather.low = dic[@"low"];
+        weather.text = dic[@"text"];
+
+        label1.text = weather.code;
+        label2.text = weather.date;
+        label3.text = weather.day;
+        label4.text = weather.high;
+        label5.text = weather.low;
+        label6.text = weather.text;
+
+        return cell;
     }
-    NSLog(@"dic: %@", dic);
-    cell.textLabel.text = [NSString stringWithFormat:@"%@", [[dic allKeys] objectAtIndex: indexPath.row]];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [[dic allValues] objectAtIndex: indexPath.row]];
-    return cell;
+    return nil;
 }
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     

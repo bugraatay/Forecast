@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1739E98D3BC6DF73EE7D2A82 /* libPods-Forecast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C099B6D35BF937348E1903BE /* libPods-Forecast.a */; };
+		47ACC8AF1E5A3E87002DCDBE /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ACC8AE1E5A3E87002DCDBE /* Weather.m */; };
 		CF92A12E1E58C0EE00C70300 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF92A12D1E58C0EE00C70300 /* main.m */; };
 		CF92A1311E58C0EE00C70300 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF92A1301E58C0EE00C70300 /* AppDelegate.m */; };
 		CF92A1371E58C0EE00C70300 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF92A1351E58C0EE00C70300 /* Main.storyboard */; };
@@ -20,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		1256C0D5C8CCD9328D6A46C8 /* Pods-Forecast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Forecast.release.xcconfig"; path = "Pods/Target Support Files/Pods-Forecast/Pods-Forecast.release.xcconfig"; sourceTree = "<group>"; };
+		47ACC8AD1E5A3E87002DCDBE /* Weather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
+		47ACC8AE1E5A3E87002DCDBE /* Weather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
 		8166722852BF420CBA940AE8 /* Pods-Forecast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Forecast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Forecast/Pods-Forecast.debug.xcconfig"; sourceTree = "<group>"; };
 		C099B6D35BF937348E1903BE /* libPods-Forecast.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Forecast.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF92A1291E58C0EE00C70300 /* Forecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +94,8 @@
 				CFB2DBB11E58CA9A00F70B26 /* Dashboard_TableViewController.m */,
 				CFBFF3F41E5A2246004D6CF0 /* Reachability.h */,
 				CFBFF3F51E5A2246004D6CF0 /* Reachability.m */,
+				47ACC8AD1E5A3E87002DCDBE /* Weather.h */,
+				47ACC8AE1E5A3E87002DCDBE /* Weather.m */,
 			);
 			path = Forecast;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 				CF92A12E1E58C0EE00C70300 /* main.m in Sources */,
 				CFBFF3F61E5A2246004D6CF0 /* Reachability.m in Sources */,
 				CFB2DBB21E58CA9A00F70B26 /* Dashboard_TableViewController.m in Sources */,
+				47ACC8AF1E5A3E87002DCDBE /* Weather.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,8 +371,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 39M8682LG7;
 				INFOPLIST_FILE = Forecast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "mba.Sample-Forecast";
+				PRODUCT_BUNDLE_IDENTIFIER = mba.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -380,8 +387,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 39M8682LG7;
 				INFOPLIST_FILE = Forecast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "mba.Sample-Forecast";
+				PRODUCT_BUNDLE_IDENTIFIER = mba.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
