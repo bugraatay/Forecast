@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+@import HockeySDK;
+
 
 @interface AppDelegate ()
 
@@ -18,6 +20,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 //    application.statusBarHidden = YES;
+    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"APP_IDENTIFIER"];
+    // Do some additional configuration if needed here
+    [[BITHockeyManager sharedHockeyManager] startManager];
+    [[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation]; // This line is obsolete in the crash only builds
     return YES;
 }
 

@@ -7,8 +7,9 @@
 //
 
 #import "Dashboard_TableViewController.h"
-
-@interface Dashboard_TableViewController ()
+@import HockeySDK;
+static BOOL didSetupHockeySDK = NO;
+@interface Dashboard_TableViewController () <BITHockeyManagerDelegate>
 
 @end
 
@@ -16,6 +17,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if (!didSetupHockeySDK) {
+        [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"APP_IDENTIFIER"];
+        [[BITHockeyManager sharedHockeyManager] setDisableCrashManager: YES]; //disable crash reporting
+        [[BITHockeyManager sharedHockeyManager] setDelegate: self];
+        [BITHockeyManager sharedHockeyManager].disableMetricsManager = YES;
+        [[BITHockeyManager sharedHockeyManager] setEnableStoreUpdateManager: YES];
+        [[BITHockeyManager sharedHockeyManager] setDisableUpdateManager: YES]; //disable auto updating
+        [BITHockeyManager sharedHockeyManager].logLevel = BITLogLevelDebug;
+
+        [[BITHockeyManager sharedHockeyManager] startManager];
+        didSetupHockeySDK = YES;
+    }
+    
+    
     self.refreshControl = [UIRefreshControl new];
     [self.refreshControl addTarget:self
                         action:@selector(refreshTable)
