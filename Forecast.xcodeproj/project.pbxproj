@@ -16,6 +16,8 @@
 		CF92A13C1E58C0EE00C70300 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF92A13A1E58C0EE00C70300 /* LaunchScreen.storyboard */; };
 		CFB2DBB21E58CA9A00F70B26 /* Dashboard_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB2DBB11E58CA9A00F70B26 /* Dashboard_TableViewController.m */; };
 		CFBFF3F61E5A2246004D6CF0 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBFF3F51E5A2246004D6CF0 /* Reachability.m */; };
+		CFEEF9C31E6216D400011E98 /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFEEF9C21E6216D400011E98 /* HockeySDK.framework */; };
+		CFEEF9C61E6219A100011E98 /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CFEEF9C51E6219A100011E98 /* HockeySDKResources.bundle */; };
 		CFEFBD811E5A1E70009A7704 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFEFBD801E5A1E70009A7704 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		CFB2DBB11E58CA9A00F70B26 /* Dashboard_TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dashboard_TableViewController.m; sourceTree = "<group>"; };
 		CFBFF3F41E5A2246004D6CF0 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		CFBFF3F51E5A2246004D6CF0 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		CFEEF9C21E6216D400011E98 /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HockeySDK.framework; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDK.framework"; sourceTree = "<group>"; };
+		CFEEF9C51E6219A100011E98 /* HockeySDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = HockeySDKResources.bundle; path = "HockeySDK-iOS/HockeySDK.embeddedframework/HockeySDKResources.bundle"; sourceTree = "<group>"; };
 		CFEFBD801E5A1E70009A7704 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFEEF9C31E6216D400011E98 /* HockeySDK.framework in Frameworks */,
 				CFEFBD811E5A1E70009A7704 /* SystemConfiguration.framework in Frameworks */,
 				1739E98D3BC6DF73EE7D2A82 /* libPods-Forecast.a in Frameworks */,
 			);
@@ -56,6 +61,7 @@
 		4A07A0C955EA2461D46BE0C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CFEEF9C21E6216D400011E98 /* HockeySDK.framework */,
 				CFEFBD801E5A1E70009A7704 /* SystemConfiguration.framework */,
 				C099B6D35BF937348E1903BE /* libPods-Forecast.a */,
 			);
@@ -65,6 +71,7 @@
 		CF92A1201E58C0EE00C70300 = {
 			isa = PBXGroup;
 			children = (
+				CFEEF9C51E6219A100011E98 /* HockeySDKResources.bundle */,
 				CF92A12B1E58C0EE00C70300 /* Forecast */,
 				CF92A12A1E58C0EE00C70300 /* Products */,
 				E65FE94EB31AC8666186C22C /* Pods */,
@@ -179,6 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFEEF9C61E6219A100011E98 /* HockeySDKResources.bundle in Resources */,
 				CF92A13C1E58C0EE00C70300 /* LaunchScreen.storyboard in Resources */,
 				CF92A1391E58C0EE00C70300 /* Assets.xcassets in Resources */,
 				CF92A1371E58C0EE00C70300 /* Main.storyboard in Resources */,
@@ -370,6 +378,10 @@
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 39M8682LG7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HockeySDK-iOS/HockeySDK.embeddedframework",
+				);
 				INFOPLIST_FILE = Forecast/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -386,6 +398,10 @@
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 39M8682LG7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HockeySDK-iOS/HockeySDK.embeddedframework",
+				);
 				INFOPLIST_FILE = Forecast/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
